@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!--DOM - Hieraquia de paginas
+    onkeypress verifica se alguma tecla esta sendo precionada
+    onkeyup é o evento quando solta a tecla-->
+<script src="~/js/numerosCampo.js"></script>
+<div class="container">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">Só números DOM</label>
+            <input class="form-control" maxlength="14" onkeypress="return Enum(event);"
+                   onfocus="ChangeColorFocus(this, event);" onblur="ChangeColorFocus(this, event);" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">CPF DOM</label>
+            <input class="form-control" maxlength="14" onkeypress="return Enum(event);"
+                   onkeyup="MascaraCPF(this, event);"
+                   onfocus="ChangeColorFocus(this, event);" onblur="ChangeColorFocus(this, event);" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">Telefone DOM</label>
+            <input class="form-control" maxlength="13" onkeypress="return Enum(event);"
+                   onkeyup="MascaraTelefone(this, event);"
+                   onfocus="ChangeColorFocus(this, event);" onblur="ChangeColorFocus(this, event);" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label class="control-label">Celular DOM</label>
+            <input class="form-control" maxlength="14" onkeypress="return Enum(event);"
+                   onkeyup="MascaraCelular(this, event);"
+                   onfocus="ChangeColorFocus(this, event);" onblur="ChangeColorFocus(this, event);" />
+        </div>
+    </div>
+</div>
